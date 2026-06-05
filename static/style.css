@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Courier+Prime&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Courier Prime', monospace;
+  background:
+    linear-gradient(rgba(10,5,2,0.6), rgba(10,5,2,0.8)),
+    url("/static/bgn1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #f5e6c8;
+}
+
+
+/* ===== HOME SECTION ===== */
+.home {
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(20, 12, 6, 0.75);
+  padding: 50px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 200, 120, 0.5);
+}
+
+.home h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  text-shadow: 0 0 15px rgba(255, 200, 120, 0.9);
+}
+
+.home p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ===== TRANSLATOR SECTION ===== */
+.translator {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.translator-card {
+  width: 100%;
+  max-width: 750px;
+  background: rgba(30, 18, 8, 0.9);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 200, 120, 0.4);
+  box-shadow:
+    0 0 35px rgba(255, 200, 120, 0.35),
+    inset 0 0 25px rgba(255, 180, 100, 0.15);
+}
+
+/* ===== LABELS ===== */
+.label-title {
+  display: block;
+  margin: 18px 0 6px;
+  font-size: 1.05rem;
+  text-shadow: 0 0 6px rgba(255, 200, 120, 0.6);
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+  width: 100%;
+  height: 130px;
+  padding: 14px;
+  background: #1a0f06;
+  color: #f5e6c8;
+  border: 1px solid rgba(255, 200, 120, 0.4);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 0 12px rgba(255, 180, 100, 0.2);
+}
+
+textarea::placeholder {
+  color: rgba(245, 230, 200, 0.6);
+}
+
+/* ===== FILE INPUT ===== */
+input[type="file"] {
+  margin-top: 8px;
+  color: #f5e6c8;
+}
+
+/* ===== CHECKBOX LIST ===== */
+.scrollable-checkboxes {
+  margin-top: 10px;
+  height: 180px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #1b1006;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 200, 120, 0.3);
+  box-shadow: inset 0 0 18px rgba(255, 180, 100, 0.15);
+}
+
+.checkbox-item {
+  display: block;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.checkbox-item:hover {
+  color: #ffd28a;
+  text-shadow: 0 0 6px rgba(255, 210, 140, 0.8);
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #ffcc88;
+}
+
+/* ===== BUTTON ===== */
+button {
+  margin-top: 25px;
+  padding: 14px 35px;
+  background: linear-gradient(145deg, #ffcc88, #d49a54);
+  color: #2b1d0f;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:
+    0 0 22px rgba(255, 200, 120, 0.7),
+    inset 0 0 8px rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 0 35px rgba(255, 210, 140, 1),
+    inset 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== OUTPUT ===== */
+#output {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== RESULT CARDS ===== */
+.card {
+  background: rgba(28, 16, 7, 0.95);
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 200, 120, 0.3);
+  box-shadow:
+    0 0 18px rgba(255, 200, 120, 0.35),
+    inset 0 0 12px rgba(255, 180, 100, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 6px rgba(255, 200, 120, 0.7);
+}

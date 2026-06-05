@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multimodal Translator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <!-- HERO / HOME -->
+  <section class="home">
+    <div class="overlay">
+      <h1>Multimodal Language Translation System</h1>
+      <p>Translate text or images into multiple languages</p>
+    </div>
+  </section>
+
+  <!-- TRANSLATOR CARD -->
+  <section class="translator">
+    <form id="translateForm" class="translator-card">
+
+      <label class="label-title">Enter Text</label>
+      <textarea name="text" placeholder="Type or paste text here..."></textarea>
+
+      <label class="label-title">Upload Image</label>
+      <input type="file" name="image" accept="image/*">
+
+      <label class="label-title">Select Target Languages</label>
+      <div class="scrollable-checkboxes">
+        {% for lang in languages %}
+          <label class="checkbox-item">
+            <input type="checkbox" name="languages[]" value="{{ lang }}">
+            {{ lang }}
+          </label>
+        {% endfor %}
+      </div>
+
+      <button type="submit">✨ Translate ✨</button>
+
+    </form>
+
+    <!-- OUTPUT -->
+    <div id="output"></div>
+  </section>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+
